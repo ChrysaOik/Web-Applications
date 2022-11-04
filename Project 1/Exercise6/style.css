@@ -1,0 +1,52 @@
+body {
+    background-color: rgb(231, 227, 220);
+    font-family: "Times New Roman", Times, serif;
+    font-size: 20px;
+}
+
+
+.top-navbar {
+    list-style-type: none;
+    margin: -10px;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgb(168, 125, 99);
+}
+  
+.top-navbar > li {
+    float: left;
+}
+  
+.top-navbar > li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+  
+.top-navbar > li a:hover {
+    background-color: rgb(88, 37, 4);
+}
+
+.active {
+    background-color: rgb(168, 93, 46);
+}
+
+
+img:active{
+    min-height:30%;
+    min-width:30%;
+    height:auto;
+    width:auto;
+    position:static;
+    margin:auto;
+}
+
+h1 {
+    text-align: center;
+}
+
+.site-name {
+    color: rgb(233, 151, 0);
+}

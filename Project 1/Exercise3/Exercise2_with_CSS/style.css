@@ -1,0 +1,135 @@
+body {
+    background-color: #e6e7e9
+}
+
+#body1 {
+    background-image: url("photos/backround.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+#photo1 {
+    box-shadow: 10px 10px 5px #ccc;
+    border-radius:8px;
+}
+
+#photo2 {
+    float: left;
+    border-radius:8px;
+}
+
+h1 {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 30px;
+    color: rgb(15, 9, 59);
+}
+
+.h1Index{
+    font-size: 40px;
+    margin-left: 40px;
+}
+
+h2 {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 25px;
+}
+
+h3 {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 20px;
+}
+
+.pad1 {
+    padding-left: 290px;
+}
+
+#clear {
+    clear: both;
+    padding-top: 10px;
+}
+
+p, .p1, legend, label{
+    font-size: 18px;
+}
+
+p {
+    font-family: "Times New Roman", Times, serif;
+}
+
+.p1 {
+    font-family: "Lucida Console", "Courier New", monospace;
+}
+
+li {
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 16px;
+}
+
+.a1:link {
+    color: rgb(72, 30, 100);
+}
+
+.a1:visited {
+    color: rgb(109, 59, 143);
+}
+
+.a1:hover {
+    color: rgb(45, 1, 56);
+}
+
+.a1:active {
+    color: rgb(159, 33, 175);
+ }
+
+.a2{
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 14px;
+ }
+
+.a2:link {
+    color: rgb(51, 26, 97);
+}
+
+.a2:visited {
+    color: rgb(88, 65, 150);
+}
+
+.a2:hover {
+    color: rgb(29, 1, 56);
+}
+
+.a2:active {
+    color: rgb(93, 41, 177);
+ }
+
+ .h2Contact {
+     color:rgb(0, 42, 63);
+ }
+
+ #name_reg,  #lastname_reg,  #email_reg {
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 14px;
+ }
+
+ #name_reg {
+    margin-left: 31px;
+ }
+
+ #email_reg {
+    margin-left: 25px;
+ }
+
+ textarea {
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 14px;
+ }
+
+ input[type=submit] {
+    background-color: rgb(76, 174, 169);
+    border-color: rgb(96, 197, 192);
+    color: white;
+    padding: 6px 8px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+ }

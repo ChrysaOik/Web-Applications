@@ -1,0 +1,311 @@
+@font-face {
+    font-family: robotoFont;
+    src: url(fonts/Roboto-Light.ttf);
+}
+
+body {
+    background-color: rgb(228, 228, 228);
+    font-family: robotoFont;
+    text-align: center;
+}
+
+#ls, #ss{
+    border: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+#h1-index {
+    color: whitesmoke;
+    font-size: xx-large;
+    justify-content: center;
+    text-shadow: 2px 2px #464343;
+}
+
+
+.top-navbar {
+    list-style-type: none;
+    margin: -10px;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgb(97, 90, 90);
+   
+}
+
+.top-navbar > li a {
+    display: block;
+    color: white;
+    text-align: left;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.top-navbar > li a:hover {
+    background-color: rgb(82, 9, 18);
+}
+
+
+.flex-container {
+    display: flex;
+    flex-direction: column;
+    padding-top: 3em;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-container > div, .flex-container > h2 {
+    background-color: #f1f1f1;
+    width: 90%;
+    line-height: 40px;
+    font-size: 18px;
+}
+
+.flex-container > h2 {
+    font-size: 22px;
+    text-align: center;
+}
+
+.flex-container > div {
+    text-align: left;
+    padding-left: 10px;
+}
+
+.fact-index1, .fact-index2, .fact-history1,.fact-history2,.fact-history3,.fact-history4 {
+    display: flex;
+    flex-direction: column;
+    background-color: #f0ebeb;
+    width: 300px;
+    height: 220px;
+    line-height: 25px;
+    font-size: 18px;
+    text-align: center;
+    border-style: dashed;
+    border-color: rgb(156, 152, 152); 
+    margin-top: 5%;
+}
+
+
+.fa-fact, .fa-fact1 {
+    position: relative;
+}
+
+.fa-fact:before, .fa-fact1:before {
+    content: "\f0eb";
+    color: rgb(53, 48, 0);
+    padding-left: 5px;
+    position: absolute;
+    top: 5px; 
+    left:0;
+}
+
+.fa-fact1:before {
+    color: rgb(114, 7, 7);
+}
+
+figure.photo-description1, figure.photo-description2, figure.photo-history1,figure.photo-history2, figure.photo-founders-left, figure.photo-founders-right {
+    width: 280px;
+    border: solid rgb(209, 202, 202);
+    border-width: 1px;
+    background-color: #f0ebeb;
+}
+
+.flex-container {
+    grid-area: article;
+    margin-top: 1.5em;
+}
+
+.fact-index1, .fact-history1 {
+    grid-area: left1;
+}
+
+.fact-index2, .fact-history2 {
+    grid-area: left2;
+}
+
+.photo-description1, .fact-history3 {
+    grid-area: right1;
+}
+
+.photo-description2, .photo-history1 {
+    grid-area: right2;
+}
+
+.fact-history4{
+    grid-area: right3;
+    padding-bottom: 120px;
+}
+
+footer {
+    grid-area: footer;
+}
+
+ul {
+    list-style-type: none;
+    margin-left: -3em;
+}
+
+a.fa-fact1:hover {
+    position: absolute;
+}
+
+a.fa-fact1:hover:after {
+    content: url(photos/snarc.png); 
+    transform: scale(.27);
+    display: block;
+    position:relative;
+    left: -450px; 
+    top: -311px; 
+
+}
+
+
+@media screen and (max-width:480px) {
+    #body-index {
+        background-image: url("photos/background.jpg");
+        background-repeat: no-repeat;
+        background-size: 100% 14%;
+    }
+
+    #ls {
+        display:none;
+    }
+
+    
+    .top-navbar a {
+        float: none;
+        display: block;
+        width: 100%;
+        text-align: left; 
+    }
+
+    .grid-container1, .grid-container2 {
+        display: grid;
+        grid-template-columns: auto;
+        align-items: center;
+        justify-items: center;
+      }
+    
+    .grid-container1 {
+        grid-template-areas:'article'
+                            'left1'
+                            'right1'
+                            'left2'
+                            'right2'
+                            'footer';
+    }
+    
+    .grid-container2 {
+        grid-template-areas:'article'
+                            'right2'
+                            'left1'
+                            'right1'
+                            'left2'
+                            'left3'
+                            'right3'
+                            'footer';
+    }
+}
+
+@media only screen and (min-width: 481px) {
+    #body-index {
+        background-image: url("photos/background.jpg");
+        background-repeat: no-repeat;
+        background-size: 100% 27%;
+    }
+
+    #ss {
+        display:none;
+    } 
+
+        
+    .top-navbar a {
+        float: none;
+        display: block;
+        width: 100%;
+        text-align: left; 
+    }
+
+    .grid-container1, .grid-container2 {
+        display: grid;
+        grid-template-columns: auto auto;
+        align-items: center;
+        justify-items: center;
+      }
+    
+    .grid-container1 {
+        grid-template-areas:'article article'
+                            'left1 right1'
+                            'left2 right2'
+                            'footer footer';
+    }
+    
+    .grid-container2 {
+        grid-template-areas:'article article'
+                            'right2 left1'
+                            'right1 left2'
+                            'left3 right3'
+                            'footer footer';
+    }
+   
+}
+
+@media only screen and (min-width: 769px) {
+    #body-index {
+        background-image: url("photos/background.jpg");
+        background-repeat: no-repeat;
+        background-size: 100% 35%;
+    }
+
+    #ss {
+        display:none;
+    }
+      
+    .top-navbar > li {
+        float: left;
+    }
+
+    .top-navbar > li a {
+        text-align: center;
+    }
+
+    .grid-container1, .grid-container2 {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        align-items: center;
+        justify-items: center;
+      }
+    
+    .grid-container1 {  
+        grid-template-areas:'left1 article right1'  
+                            'left2 article right2'  
+                            'footer footer footer'; 
+    }
+    
+    .grid-container2 {
+        grid-template-areas:'left1 article right1'
+                            'left2 article right2'
+                            'left3 article right3'
+                            'footer footer footer';
+    }
+
+    .flex-container {
+        margin-top: 5%;
+    }
+
+    .fact-index1{
+        margin-top: 10em;
+        margin-left: 3em;
+    }
+
+    .fact-index2 {
+        margin-top: -5em;
+        margin-left: 3em;
+    }
+
+   .photo-description1 {
+        margin-top: 18em;
+   }
+
+}

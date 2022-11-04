@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="el">
+    <head>
+        <meta charset="utf-8">
+        <title>Φόρμα Εγγραφης</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body id="body-val" >
+        <header>
+            <ul class="top-navbar">
+                <li><a href="index.html">Αρχική</a></li>
+                <li><a href="history.html">Ιστορική Αναδρομή</a></li>
+                <li><a href="founders.html">Θεμελιωτές</a></li>
+                <li><a href="validationform.html">Εγγραφή</a></li>
+                <li><a href="../Exercise3/Exercise1_with_CSS/index.html">Menu</a></li>
+            </ul>
+            <h1>Εγγραφή νέου χρήστη.</h1>
+        </header>
+        <main>
+            <form action="/action_page.php" method="POST" >
+                <fieldset>
+                    <legend class="description" >Συμπλήρωσε τα στοιχεία σου:</legend>
+                        <label class="description" for="fname">Όνομα:</label><br>
+                        <input type="text" placeholder="Μαρία" id="fname" name="fname" onkeyup= "formValidation('fname')"
+                               pattern="[A-Za-zα-ωΑ-Ωίϊΐόάέύϋΰήώ]{2,}|[A-Za-zα-ωΑ-Ωίϊΐόάέύϋΰήώ]{2,}-[A-Za-zα-ωΑ-Ωίϊΐόάέύϋΰήώ]{2,}"
+                               title="Μαρία ή Αννα-Μαρία" required><br>
+
+                               <p id="demo"></p>
+
+                        <label class="description" for="lname">Επίθετο:</label><br>
+                        <input type="text" placeholder="Ιωάννου" id="lname" name="lname" onkeyup= "formValidation('lname')" 
+                            pattern="[A-Za-zα-ωΑ-Ωίϊΐόάέύϋΰήώ]{2,}" required><br>
+                        
+                        <label class="description" for="email">E-mail:</label><br>
+                        <input type="email" placeholder="email@example.com" id="email" name="email" onkeyup= "formValidation('email')" autocomplete="on" required><br>
+                        
+                        <label class="description" for="address1">Διεύθυνση:</label><br>
+                        <input type="text" placeholder="Κατσαρωνίου 4" id="address1" name="address1" onkeyup= "formValidation('address1')"
+                               pattern="[A-Za-zα-ωΑ-Ωίϊΐόάέύϋΰήώ]{2,}|[A-Za-zα-ωΑ-Ωίϊΐόάέύϋΰήώ]{2,} [0-9]{0,3}|[A-Za-zα-ωΑ-Ωίϊΐόάέύϋΰήώ]{2,} [A-Za-zα-ωΑ-Ωίϊΐόάέύϋΰήώ]{2,} [0-9]{0,3}" 
+                               required><br>
+                        
+                        <label class="description" for="birthday">Ημερομηνία Γέννησης:</label><br>
+                        <input type="date" id="birthday" name="birthday" required><br>
+                        
+                        <label class="description" for="country">Χώρα:</label><br>
+                        <input list="countries"  name="country" id="country" placeholder="Επίλεξε χώρα.." required><br>
+                        <datalist id="countries">
+                            <option value="Αγία Λουκία">
+                            <option value="Άγιος Βικέντιος και Γρεναδίνες">
+                            <option value="Άγιος Μαρίνος">
+                            <option value="Άγιος Μαρτίνος (Ολλανδία)">
+                            <option value="Άγιος Χριστόφορος και Νέβις">
+                            <option value="Αζερμπαϊτζάν">
+                            <option value="Αίγυπτος">
+                            <option value="Αιθιοπία">
+                            <option value="Αϊτή">
+                            <option value="Ακτή Ελεφαντοστού">
+                            <option value="Αλβανία">
+                            <option value="Αλγερία">
+                            <option value="Αμπχαζία">
+                            <option value="Ανατολικό Τιμόρ">
+                            <option value="Ανγκόλα">
+                            <option value="Ανδόρρα">
+                            <option value="Αντίγκουα και Μπαρμπούντα">
+                            <option value="Αργεντινή">
+                            <option value="Αρμενία">
+                            <option value="Αρούμπα">
+                            <option value="Δημοκρατία του Αρτσάχ">
+                            <option value="Αυστραλία">
+                            <option value="Αυστρία">
+                            <option value="Αφγανιστάν">
+                            <option value="Βανουάτου">
+                            <option value="Βατικανό">
+                            <option value="Βέλγιο">
+                            <option value="Βενεζουέλα">
+                            <option value="Βερμούδες">
+                            <option value="Βιετνάμ">
+                            <option value="Βολιβία">
+                            <option value="Βόρεια Ιρλανδία">
+                            <option value="Βόρεια Κορέα">
+                            <option value="Βόρεια Μακεδονία">
+                            <option value="Βοσνία και Ερζεγοβίνη">
+                            <option value="Βουλγαρία">
+                            <option value="Βραζιλία">
+                            <option value="Γαλλία">
+                            <option value="Γερμανία">
+                            <option value="Γεωργία">
+                            <option value="Γκάμπια">
+                            <option value="Γκαμπόν">
+                            <option value="Γκάνα">
+                            <option value="Γουατεμάλα">
+                            <option value="Γουιάνα">
+                            <option value="Γουινέα-Μπισσάου">
+                            <option value="Γρενάδα">
+                            <option value="Γροιλανδία">
+                            <option value="Δανία">
+                            <option value="Δομινίκα">
+                            <option value="Δομινικανή Δημοκρατία">
+                            <option value="Δημοκρατία της Σαχάρας">
+                            <option value="Ελ Σαλβαδόρ">
+                            <option value="Ελβετία">
+                            <option value="Ελλάδα">
+                            <option value="Ερυθραία">
+                            <option value="Εσθονία">
+                            <option value="Εσουατίνι">
+                            <option value="Ζάμπια">
+                            <option value="Ζιμπάμπουε">
+                            <option value="Ηνωμένα Αραβικά Εμιράτα">
+                            <option value="ΗΠΑ">
+                            <option value="Ηνωμένο Βασίλειο">
+                            <option value="Ιαπωνία">
+                            <option value="Ινδία">
+                            <option value="Ινδονησία">
+                            <option value="Ιορδανία">
+                            <option value="Ιράκ">
+                            <option value="Ιράν">
+                            <option value="Ιρλανδία">
+                            <option value="Ισημερινή Γουινέα">
+                            <option value="Ισημερινός">
+                            <option value="Ισραήλ">
+                            <option value="Ισλανδία">
+                            <option value="Ισπανία">
+                            <option value="Ιταλία">
+                            <option value="Καζακστάν">
+                            <option value="Καμερούν">
+                            <option value="Καμπότζη">
+                            <option value="Καναδάς">
+                            <option value="Κατάρ">
+                            <option value="Δημοκρατία Κεντρικής Αφρικής">
+                            <option value="Κένυα">
+                            <option value="Κίνα">
+                            <option value="Κιργιζιστάν">
+                            <option value="Κιριμπάτι">
+                            <option value="Κολομβία">
+                            <option value="Κομόρες">
+                            <option value="Δημοκρατία του Κονγκό">
+                            <option value="Κόστα Ρίκα">
+                            <option value="Κόσοβο">
+                            <option value="Κούβα">
+                            <option value="Κουβέιτ">
+                            <option value="Νήσοι Κουκ">
+                            <option value="Κουρασάο">
+                            <option value="Κροατία">
+                            <option value="Κύπρος">
+                            <option value="Λάος">
+                            <option value="Λεσότο">
+                            <option value="Λετονία">
+                            <option value="Λευκορωσία">
+                            <option value="Λίβανος">
+                            <option value="Λιβερία">
+                            <option value="Λιβύη">
+                            <option value="Λιθουανία">
+                            <option value="Λίχτενσταϊν">
+                            <option value="Λουξεμβούργο">
+                            <option value="Μαδαγασκάρη">
+                            <option value="Μαλαισία">
+                            <option value="Μαλάουι">
+                            <option value="Μαλδίβες">
+                            <option value="Μάλι">
+                            <option value="Μάλτα">
+                            <option value="Μαρόκο">
+                            <option value="Μαυρίκιος">
+                            <option value="Μαυριτανία">
+                            <option value="Μαυροβούνιο">
+                            <option value="Μεξικό">
+                            <option value="Μιανμάρ">
+                            <option value="Μικρονησία">
+                            <option value="Μογγολία">
+                            <option value="Μοζαμβίκη">
+                            <option value="Μολδαβία">
+                            <option value="Μονακό">
+                            <option value="Μπανγκλαντές">
+                            <option value="Μπαρμπάντος">
+                            <option value="Μπαχάμες">
+                            <option value="Μπαχρέιν">
+                            <option value="Μπελίζ">
+                            <option value="Μπενίν">
+                            <option value="Μποτσουάνα">
+                            <option value="Μπουρκίνα Φάσο">
+                            <option value="Μπουρούντι">
+                            <option value="Μπουτάν">
+                            <option value="Μπρουνέι">
+                            <option value="Ναμίμπια">
+                            <option value="Ναουρού">
+                            <option value="Νέα Ζηλανδία">
+                            <option value="Νεπάλ">
+                            <option value="Νήσοι Μάρσαλ">
+                            <option value="Νήσοι Σολομώντα">
+                            <option value="Νίγηρας">
+                            <option value="Νιγηρία">
+                            <option value="Νικαράγουα">
+                            <option value="Νιούε">
+                            <option value="Νορβηγία">
+                            <option value="Νότια Αφρική">
+                            <option value="Νότια Κορέα">
+                            <option value="Νότια Οσσετία">
+                            <option value="Νότιο Σουδάν">
+                            <option value="Ολλανδία">
+                            <option value="Ομάν">
+                            <option value="Ονδούρα">
+                            <option value="Ουαλία">
+                            <option value="Ουγγαρία">
+                            <option value="Ουγκάντα">
+                            <option value="Ουζμπεκιστάν">
+                            <option value="Ουκρανία">
+                            <option value="Ουρουγουάη">
+                            <option value="Πακιστάν">
+                            <option value="Παλάου">
+                            <option value="Κράτος της Παλαιστίνης">
+                            <option value="Παναμάς">
+                            <option value="Παπούα Νέα Γουινέα">
+                            <option value="Παραγουάη">
+                            <option value="Περού">
+                            <option value="Πολωνία">
+                            <option value="Πορτογαλία">
+                            <option value="Πράσινο Ακρωτήριο">
+                            <option value="Ρουάντα">
+                            <option value="Ρουμανία">
+                            <option value="Ρωσία">
+                            <option value="Σαμόα">
+                            <option value="Σάο Τομέ και Πρίνσιπε">
+                            <option value="Σαουδική Αραβία">
+                            <option value="Σενεγάλη">
+                            <option value="Σερβία">
+                            <option value="Σεϋχέλλες">
+                            <option value="Σιγκαπούρη">
+                            <option value="Σιέρα Λεόνε">
+                            <option value="Σκωτία">
+                            <option value="Σλοβακία">
+                            <option value="Σλοβενία">
+                            <option value="Σομαλία">
+                            <option value="Σομαλιλάνδη">
+                            <option value="Σουδάν">
+                            <option value="Σουηδία">
+                            <option value="Σουρινάμ">
+                            <option value="Σρι Λάνκα">       
+                            <option value="Συρία">
+                            <option value="Ταϊβάν">
+                            <option value="Ταϊλάνδη">
+                            <option value="Τανζανία">
+                            <option value="Τατζικιστάν">
+                            <option value="Τζαμάικα">
+                            <option value="Τζιμπουτί">
+                            <option value="Τόγκο">
+                            <option value="Τόνγκα">
+                            <option value="Τουβαλού">
+                            <option value="Τουρκία">
+                            <option value="Τουρκμενιστάν">
+                            <option value="Τρινιντάντ και Τομπάγκο">
+                            <option value="Τσαντ">
+                            <option value="Τσεχία">
+                            <option value="Υεμένη">   
+                            <option value="Υπερδνειστερία">
+                            <option value="Νήσοι Φερόες">
+                            <option value="Φιλιππίνες">
+                            <option value="Φινλανδία">
+                            <option value="Φίτζι">
+                            <option value="Χιλή">         
+                        </datalist>
+
+                       <label class="description" for="telnumber">Κινητό:</label><br>
+                        <input type="tel" placeholder="30692459871" id="telnumber" name="telnumber" onkeyup= "formValidation('telnumber')" autocomplete="on" 
+                               pattern="[0-9]{10,}" required>
+                        <details>
+                        <summary></summary>
+                        <p>Συμπλήρωσε τον τηλεφωνικό κωδικό της χώρας σου.</p>
+                        </details><br>
+
+                        <label class="description" for="username">Username:</label><br>
+                        <input type="text" placeholder="Username" id="username" name="username" required><br>
+
+                        <label class="description" for="password">Κωδικός:</label><br>
+                        <input type="password" placeholder="Κωδικός" id="password" onkeyup= "formValidation('password')"
+                            pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Πρέπει να περιέχεται τουλάχιστον ένας αριθμός, ένα κεφαλαίο γράμμα, ένα μικρό γράμμα και τουλάχιστον 8 χαρακτήρες." 
+                            required><br>
+                            <div id="message">
+                                <h3>Ο κωδικός πρέπει να περιέχει τα εξής:</h3>
+                                <p id="letter" class="invalid">Ένα <b>πεζό</b> γράμμα</p>
+                                <p id="capital" class="invalid">Ένα <b>κεφαλαίο</b> γράμμα</p>
+                                <p id="number" class="invalid">Έναν <b>αριθμό</b></p>
+                                <p id="length" class="invalid">Τουλάχιστον <b>8 χαρακτήρες</b></p>
+                              </div><br>
+                        <label class="description" for="confirm_password">Επιβεβαίωση κωδικού:</label><br>
+                        <input type="password" placeholder="Επιβεβαίωση κωδικού" id="confirm_password" onkeyup="compare_input()" required><br>
+
+                        <p class="inv-confpas"></p>
+
+                </fieldset><br>
+
+                <fieldset>
+                    <legend class="description" >Συμπλήρωσε το παρακάτω ερωτηματολόγιο:</legend>
+                        <label class="description">1. Ηλικία</label><br>
+                        <input type="radio" id="under18" name="age" value="under18" required>
+                        <label for="under18">Κάτω από 18</label><br>
+                        <input type="radio" id="18-25" name="age" value="18-25">
+                        <label for="18-25">18-25</label><br>
+                        <input type="radio" id="25-45" name="age" value="25-45">
+                        <label for="25-45">25-45</label><br>
+                        <input type="radio" id="over45" name="age" value="over45">
+                        <label for="over45">45 ή παραπάνω</label><br><br>
+
+                        <label class="description">2. Φύλο</label><br>
+                        <input type="radio" id="male" name="gender" value="male" required>
+                        <label for="male">Άνδρας</label><br>
+                        <input type="radio" id="female" name="gender" value="female">
+                        <label for="female">Γυναίκα</label><br>
+                        <input type="radio" id="other1" name="gender" value="other1">
+                        <label for="other1">Άλλο</label><br><br>
+                        
+
+                        <label class="description" for="edu">3. Επίπεδο εκπαίδευσης:</label><br>
+                        <select name="edu" id="edu" required>
+                            <option value="" disabled selected hidden>Επίλεξε επίπεδο εκπαίδευσης..</option>
+                            <option value="elschool">Απολυτήριο Δημοτικού</option >
+                            <option value="secschool">Απολυτήριο Γυμνασίου</option>
+                            <option value="highschool">Απολυτήριου Λυκείου(ΓΕΛ ή ΕΠΑΛ)</option>
+                            <option value="bach">Πτυχίο</option>
+                            <option value="master">Μεταπτυχιακό</option>
+                            <option value="phd">Διδακτορικό</option>
+                        </select><br><br>
+
+                        <label class="description" for="field">4. Ιδιότητα:</label><br>
+                        <select name="field" id="field" required>
+                            <option value="" disabled selected hidden>Επίλεξε ιδιότητα..</option>
+                            <option value="unem">Άνεργος</option >
+                            <option value="empl">Εργαζόμενος</option>
+                            <option value="student">Μαθητής</option>
+                            <option value="unistudent">Φοιτητής</option>
+                            <option value="ret">Συνταξιούχος</option>
+                        </select><br><br>
+
+                        <label class="description">5. Ποιον browser χρησιμοποιείς;</label><br>
+                        <input type="radio" id="chrome" name="browser" value="chrome" required>
+                        <label for="chrome">Chrome</label><br>
+                        <input type="radio" id="Firefox" name="browser" value="Firefox">
+                        <label for="Firefox">Firefox</label><br>
+                        <input type="radio" id="Opera" name="browser" value="Opera">
+                        <label for="Opera">Opera</label><br>
+                        <input type="radio" name="browser" id="other2" value="other2"/><label for="other2">Άλλο:</label>
+                            <input type="text" name="browsertext" value="" placeholder="Συμπλήρωσε τον browser" />
+                        <br><br>
+
+                        <label class="description" for="job">6. Σε ποιον κλάδο εργάζεσαι/εργαζόσουν/θα ήθελες να εργαστείς;</label><br>
+                        <input list="jobs"  name="job" id="job" placeholder="Επίλεξε επάγγελμα.." required><br>
+                        <datalist id="jobs">
+                            <option value="Πωλήσεις">
+                            <option value="Εξυπηρέτηση Πελατών">
+                            <option value="Πληροφορική">
+                            <option value="Μηχανικοί">
+                            <option value="Τουρισμός">
+                            <option value="Ένδυση / Υπόδηση">
+                            <option value="Μάρκετινγκ / Έρευνα Αγοράς">
+                            <option value="Υποστηρικτικοί Υπάλληλοι">
+                            <option value="Τεχνικοί-Συντηρητές-Service ">
+                            <option value="Χρηματο-οικονομικά">
+                            <option value="Επαγγέλματα Υγείας ">
+                            <option value="Εστίαση">
+                            <option value="Διοίκηση Επιχειρήσεων">
+                            <option value="Τηλεπικοινωνίες">
+                            <option value="Γραμματειακή Υποστήριξη">
+                            <option value="Επιστήμες">
+                            <option value="Σύμβουλοι Επιχειρήσεων">
+                            <option value="Τομέας Παραγωγής">
+                            <option value="Αποθήκη/Logistics">
+                            <option value="Διαφήμιση / Δημ. Σχεσ. / Promotion ">
+                            <option value="Τμήμα Ανθρωπίνων Πόρων">
+                            <option value="Μεταφορές">
+                            <option value="Εκπαίδευση">
+                            <option value="Κατασκευές">
+                            <option value="Επιχειρήσεις Real Estate ">
+                            <option value="Αισθητική / κομμωτήρια / Fitness">
+                            <option value="Ναυτιλιακά">
+                            <option value="Δημοσιογραφία / ΜΜΕ">
+                            <option value="Αγροτικά">
+							<option value="Αθλητισμός">
+                            <option value="Οικιακές Εργασίες">
+						</datalist><br><br>
+
+                        <label class="description">7. Από πού πληροφορήθηκες για το site;</label><br>
+                        <input type="checkbox" id="check1" name="check1" value="friend/fam">
+                        <label for="check1"> Φίλο / Συγγενή</label><br>
+                        <input type="checkbox" id="check2" name="check2" value="web">
+                        <label for="check2"> Αναζήτηση στο Internet</label><br>
+                        <input type="checkbox" id="check3" name="check3" value="email">
+                        <label for="check3"> E-mail</label><br>
+                        <input type="checkbox" id="check4" name="check4" value="social">
+                        <label for="check4"> Social media</label><br>
+                        <input type="checkbox" id="check5" name="check5" value="ad">
+                        <label for="check5"> Διαφήμιση</label><br>
+                        <input type="checkbox" name="checkbox" id="other3" value="other3"/><label for="other3">Άλλο:</label>
+                            <input type="text" name="checkboxtext" value="" placeholder="Συμπλήρωσε.." /><br><br>
+                    
+                        <label class="description">8. Πόσο ικανοποιημένος έμεινες από την περιήγηση στο site;</label><br>
+                        <label for="less1">Καθόλου</label>
+                        <input type="radio" id="less1" name="satisfy" value="less1" required>
+                        <input type="radio" id="little1" name="satisfy" value="little1">
+                        <input type="radio" id="medium1" name="satisfy" value="medium1">
+                        <input type="radio" id="very1" name="satisfy" value="very1">
+                        <input type="radio" id="verymuch1" name="satisfy" value="verymuch1">
+                        <label for="verymuch1">Πάρα πολύ</label>
+                        <br><br>
+
+                        <label class="description">9. Πόσο πιθανό είναι να προτείνεις σε κάποιον άλλο το site;</label><br>
+                        <label for="less2">Καθόλου</label>
+                        <input type="radio" id="less2" name="recommend" value="less2" required>
+                        <input type="radio" id="little2" name="recommend" value="little2">
+                        <input type="radio" id="medium2" name="recommend" value="medium2">
+                        <input type="radio" id="very" name="recommend" value="very">
+                        <input type="radio" id="verymuch2" name="recommend" value="verymuch2">
+                        <label for="verymuch2">Πάρα πολύ</label>
+                        <br><br>
+
+                        <label class="description" for="opinion">10. Πες μας λίγα λόγια για την εμπειρία σου με το site:</label><br>
+                        <textarea id="opinion" name="opinion" rows="4" cols="30" placeholder="Συμπλήρωσε εδώ.." required></textarea>
+                        <br><br>
+
+                        <p>Με την δημιουργία του λογαριασμού συμφωνείτε στους <a href="#" style="color:rgb(21, 137, 253)">Όρους & Προϋποθέσεις</a>.</p>
+                            
+                        <button type="submit" class="registerbtn">Εγγραφή</button>
+                    
+                </fieldset>
+            </form>              
+        </main>
+        <script src="script.js"></script> 
+        <script>
+            window.onload=password();
+        </script>
+    </body>
+</html>
